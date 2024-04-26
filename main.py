@@ -1,6 +1,14 @@
 from classes import AddressBook
 from parsing import parse_input
-from functions import command_add, command_change, command_phone, command_all, command_add_birthday, command_show_birthday, birthdays
+from functions import (
+    command_add,
+    command_change,
+    command_phone,
+    command_all,
+    command_add_birthday,
+    command_show_birthday,
+    birthdays,
+)
 from saving import save_data, load_data
 
 
@@ -23,7 +31,9 @@ def main():
             print(command_add(args, book))
 
         elif command == "change":
-            print(command_change(args, book)) # Зробив шо потрібно вказувати старий номер так як він може бути не один
+            print(
+                command_change(args, book)
+            )  # Зробив шо потрібно вказувати старий номер так як він може бути не один
 
         elif command == "phone":
             print(command_phone(args, book))
@@ -44,5 +54,5 @@ def main():
             print("Invalid command!")
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()

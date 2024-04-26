@@ -81,4 +81,8 @@ class AddressBook(UserDict):
         return result
 
     def get_upcoming_birthdays(self):
-        print(*get_upcoming_birthdays([{key: value.birthday} for key, value in self.data.items()]))
+        print(
+            *get_upcoming_birthdays(
+                [{key: value.birthday} for key, value in self.data.items()]
+            )
+        )
